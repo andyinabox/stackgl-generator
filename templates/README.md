@@ -6,7 +6,7 @@
 
 ## Usage
 
-[![NPM](https://nodei.co/npm/{{name}}.png)](https://nodei.co/npm/{{name}}/)
+[![NPM](https://nodei.co/npm/{{name}}.png)](https://www.npmjs.com/package/{{name}})
 
 ## Contributing
 
