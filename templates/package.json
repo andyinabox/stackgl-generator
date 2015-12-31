@@ -10,8 +10,15 @@
     "email": "{{user.email}}",
     "url": "{{user.site}}"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "gl-now": "~1.4.0",
+    "gl-shader": "~4.1.1",
+    "a-big-triangle": "~1.0.2"
+  },
+  "devDependencies": {
+    "glslify": "~5.0.0",
+    "budo": "~7.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/{{user.github}}/{{name}}.git"
