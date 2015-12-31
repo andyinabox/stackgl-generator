@@ -1,4 +1,4 @@
-var shell = require('gl-now');
+var shell = require('gl-now')();
 var createShader = require('gl-shader');
 var gessoCanvas = require('a-big-triangle');
 var glslify = require('glslify');

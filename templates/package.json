@@ -4,7 +4,9 @@
   "description": "{{description}}",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "budo index.js --live --open -- -t glslify"
+  },
   "author": {
     "name": "{{user.name}}",
     "email": "{{user.email}}",
