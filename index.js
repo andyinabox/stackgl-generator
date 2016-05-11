@@ -58,8 +58,7 @@ function getParams(done) {
     if (err) return done(err)
 
     var data = {
-        tags: JSON.stringify(['ecosystem:stackgl'], null, 2)
-      , user: {
+      user: {
           name: config.get('init.author.name')
         , site: config.get('init.author.url')
         , email: config.get('init.author.email')
@@ -83,26 +82,6 @@ function getParams(done) {
       {
           'name': 'description'
         , 'message': 'Module description'
-      },
-      {
-          'name': 'stability'
-        , 'type': 'list'
-        , 'message': 'Module stability:'
-        , 'default': 'experimental'
-        , 'choices': [
-            'deprecated'
-          , 'experimental'
-          , 'unstable'
-          , 'stable'
-          , 'frozen'
-          , 'locked'
-        ]
-      },
-      {
-          'name': 'shared'
-        , 'message': 'Hosted in the stackgl GitHub organisation?'
-        , 'default': false
-        , 'type': 'confirm'
       }
     ], function(results) {
       if (err) return done(err)

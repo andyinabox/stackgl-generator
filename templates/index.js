@@ -18,9 +18,6 @@ shell.on('gl-render', function(t) {
 	// bind shader
 	shader.bind();
 
-	// still not totally sure what this does
-	shader.attributes.position.pointer();
-
 	// draw big triangle
 	gessoCanvas(gl);
 });

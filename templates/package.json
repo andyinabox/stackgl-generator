@@ -1,11 +1,14 @@
 {
   "name": "{{name}}",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "{{description}}",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "budo index.js --live --open -- -t glslify"
+    "start": "budo index.js -H localhost --live --open --css styles.css -- -t glslify",
+    "build": "budo-demo index.js -c styles.css -m -- -t glslify",
+    "deploy": "npm run build; gh-pages -d dist; npm run clean",
+    "clean": "rm -r dist"
   },
   "author": {
     "name": "{{user.name}}",
@@ -19,15 +22,13 @@
   },
   "devDependencies": {
     "glslify": "~5.0.0",
-    "budo": "~7.1.0"
+    "budo": "~7.1.0",
+    "budo-demo": "^0.1.1",
+    "gh-pages": "^0.11.0"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/{{user.github}}/{{name}}.git"
   },
-  "keywords": {{tags}},
-  "homepage": "https://github.com/{{user.github}}/{{name}}",
-  "bugs": {
-    "url": "https://github.com/{{user.github}}/{{name}}/issues"
-  }
+  "homepage": "https://github.com/{{user.github}}/{{name}}"
 }
